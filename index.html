@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>infomindUX</title>
+
+		<style>
+			@font-face {
+				font-family: "SUITE-Regular";
+				src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+					format("woff2");
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			* {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			body {
+				min-width: 320px;
+				max-width: 980px;
+				font-size: 0;
+				padding: 0 20px;
+				margin: 0 auto;
+				background: #eee;
+				font-family: "SUITE-Regular";
+			}
+
+			h1 {
+				margin: 50px 0;
+				font-size: 32px;
+				font-weight: 100;
+				color: #777;
+			}
+
+			h1 small {
+				display: block;
+				color: #777;
+				font-size: 62px;
+				font-weight: 900;
+				color: #222;
+			}
+
+			.memo {
+				display: block !important;
+				font-size: 16px;
+				background: #ccc;
+				border-radius: 25px;
+				padding: 20px 30px 30px;
+
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			h2 {
+				margin: 30px 0 20px;
+				font-size: 30px;
+				font-weight: 600;
+			}
+
+			h3 {
+				margin: 30px 0 20px;
+				font-size: 24px;
+				font-weight: 600;
+			}
+
+			div {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+			}
+
+			h3 + div a {
+				flex: 1 1 100%;
+				display: block;
+				position: relative;
+				font-size: 16px;
+				background: #444;
+				border-radius: 25px;
+				padding: 20px;
+				margin: 0 0 10px 0;
+				text-align: left;
+				color: #5bc0de;
+				text-decoration: none;
+
+				-webkit-transition: all 0.1s ease;
+				-moz-transition: all 0.1s ease;
+				-o-transition: all 0.1s ease;
+				-ms-transition: all 0.1s ease;
+				transition: all 0.1s ease;
+			}
+
+			@media (min-width: 980px) {
+				h3 + div a {
+					flex: 0 1 32%;
+					margin: 0 calc(4% / 6) 15px;
+				}
+			}
+
+			h3 + div a:active,
+			h3 + div a:hover {
+				background: #222;
+				box-shadow: 0 2px 40px 10px rgba(0, 0, 0, 0.3);
+				z-index: 10;
+				border-radius: 15px;
+				transform: scale(1.04);
+			}
+
+			hr {
+				display: block;
+				width: 100%;
+				max-width: 400px;
+				margin: 20px auto;
+				border: none;
+			}
+
+			strong {
+				color: #fff;
+				display: block;
+				font-size: 20px;
+				font-weight: 600;
+				border-bottom: 1px solid #666;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			span {
+				text-decoration: underline;
+			}
+
+			.co {
+				font-size: 24px;
+				margin: 40px 0 50px;
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>
+			PROJECT NAME
+			<small>인포마인드 기본 템플릿</small>
+		</h1>
+
+		<h2>INCLUDE</h2>
+		<div class="memo">
+			<p>git : <a href="">https://github.com/emrdl7/info</a></p>
+			<p>
+				기본글꼴 : pretendard GOV
+				<a
+					href="https://github.com/orioncactus/pretendard/tree/main/packages/pretendard-gov"
+					>https://github.com/orioncactus/pretendard/tree/main/packages/pretendard-gov</a
+				>
+			</p>
+			<p>
+				아이콘 : google material-design-icons
+				<a
+					href="https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed"
+				>
+					https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed
+				</a>
+			</p>
+		</div>
+
+		<h3>MAIN</h3>
+		<div>
+			<a href="template.html">
+				<strong>기본 템플릿 정의</strong>
+				<span>template.html</span>
+			</a>
+
+			<!-- <a href="main.html">
+				<strong>메인</strong>
+				<span>main.html</span>
+			</a> -->
+		</div>
+
+		<!-- <h3>SUB</h3>
+		<div>
+			<a href="sub01.html">
+				<strong>로그인</strong>
+				<span>sub01.html</span>
+			</a>
+
+			<a href="sub02.html">
+				<strong>회원가입</strong>
+				<span>sub02.html</span>
+			</a>
+
+			<a href="sub03.html">
+				<strong>비밀번호변경</strong>
+				<span>sub03.html</span>
+			</a>
+		</div> -->
+
+		<p class="co">ⓒ INFOMIND</p>
+	</body>
+</html>

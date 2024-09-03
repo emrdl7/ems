@@ -1,0 +1,160 @@
+//breakpoints
+
+@mixin mobile {
+	@media (max-width: $breakpoint-sm - 1px) {
+		@content;
+	}
+}
+@mixin mobileMore {
+	@media (min-width: $breakpoint-sm) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
+		@content;
+	}
+}
+
+//tablet size 이하
+@mixin tabletLess {
+	//
+	@media (max-width: $breakpoint-md - 1px) {
+		@content;
+	}
+}
+
+//tablet size 이상
+@mixin tabletMore {
+	//
+	@media (min-width: $breakpoint-md) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $breakpoint-lg) {
+		@content;
+	}
+}
+
+//focus color
+@mixin focus($offset: -0.4rem, $color: $primary, $alpha: 0.8) {
+	//border-radius: inherit;
+	outline-offset: $offset;
+	$transparent: 1 - $alpha;
+	$focus-color: transparentize($color, $transparent);
+	outline: 2px solid $focus-color;
+}
+
+//spacer
+@mixin spacer($num) {
+	@for $i from 1 through $num {
+		$key: $i;
+		$value: ($i * 4 * 0.1) + rem;
+		//default spacers value: _variables.scss
+		$spacers: map-merge(
+			(
+				$key: $value,
+			),
+			$spacers
+		) !global;
+	}
+}
+
+//border radius
+@mixin radius($num) {
+	$border-radius: map-merge(
+			$num: (
+				$num * 0.1,
+			) + rem,
+		),
+		$border-radius;
+}
+
+//position
+@mixin position($p: absolute, $t: null, $b: null, $l: null, $r: null) {
+	position: $p;
+	top: $t;
+	bottom: $b;
+	left: $l;
+	right: $r;
+}
+
+//transform 기준점 중앙 정렬
+@mixin transform-origin($x: 50%, $y: 50%) {
+	transform-origin: $x $y;
+}
+
+//font size
+@mixin fz() {
+	@each $type, $size in map-get($font-size, "sizes") {
+		@each $key, $value in $size {
+			--#{$prefix}fz-#{$type}-#{$key}: #{$value};
+		}
+	}
+}
+
+@mixin flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: -webkit-flex;
+	-webkit-align-item: center;
+	-webkit-justify-content: center;
+}
+
+@mixin drop-shadow($x: 0, $y: 2px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+	-webkit-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha);
+	-moz-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha);
+	box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+
+@mixin inner-shadow($x: 0, $y: 2px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+	-webkit-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha) inset;
+	-moz-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha) inset;
+	box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha) inset;
+}
+
+@mixin gradient($startColor: #eee, $endColor: white) {
+	background-color: $startColor;
+	background: linear-gradient(top, $startColor, $endColor);
+	background: -webkit-linear-gradient(top, $startColor, $endColor);
+	background: -moz-linear-gradient(top, $startColor, $endColor);
+	background: -ms-linear-gradient(top, $startColor, $endColor);
+	background: -o-linear-gradient(top, $startColor, $endColor);
+}
+
+@mixin gradienth($startColor: #eee, $endColor: white) {
+	background-color: $startColor;
+	background: linear-gradient(left, $startColor, $endColor);
+	background: -webkit-linear-gradient(left, $startColor, $endColor);
+	background: -moz-linear-gradient(left, $startColor, $endColor);
+	background: -ms-linear-gradient(left, $startColor, $endColor);
+	background: -o-linear-gradient(left, $startColor, $endColor);
+}
+
+@mixin ani($time: 0.4s) {
+	-webkit-transition: all $time linear;
+	-moz-transition: all $time linear;
+	-o-transition: all $time linear;
+	-ms-transition: all $time linear;
+	transition: all $time linear;
+}
+
+@mixin container($con-width) {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	width: $con-width;
+	height: 100%;
+}
+
+@mixin ellipsis($line) {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+}
