@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -58,73 +58,90 @@
                 </li>
             </ul>
 
-			<div class="row">
+			<div class="map">
+                <p class="solar">태양광 <span>20kW</span></p>
+                <p class="kepco">한전 <span></span></p>
+            </div>
 
-				<div class="chart-box col-lg-8">
-					<h2 class="icon01">Energy Usage</h2>
-					<div class="box">
-						<!-- 챠트 영역 -->
-					</div>
-				</div>
-	
-				<div class="chart-box col-lg-4">
-					<h2 class="icon02">Daily Energy Cost</h2>
-					<div class="box">
-						<!-- 챠트 영역 -->
-					</div>
-				</div>
+			<div class="map2">
+                <p class="pcs">pcs <span>20kW</span></p>
 
-			</div>
+                <div class="pcs">
+                    <strong>PCS</strong>
 
-			<div class="row">
+                    <div>
+                        <span class="stat01">충전</span>
+                        <span class="stat02">방전</span>
+                        <span class="stat03">활성</span>
+                        <span class="stat04">정지</span>
+                        <span class="stat05">대기</span>
+                        <span class="stat06">통신두절</span>
 
-				<div class="chart-box col-lg-12">
-					<h2 class="icon03">Carbon Footprint CO2</h2>
-					<div class="box">
-						<!-- 챠트 영역 -->
-					</div>
-				</div>
+                    </div>
+                </div>
 
-			</div>
+                <div class="bms">
+                    <strong>BMS</strong>
 
+                    <div>
+
+                        <div>
+                            100%
+                        </div>
+    
+                        <span class="stat01">SOH 100%</span>
+                        <span class="stat02">TEMP 25℃</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart">
+                <!-- 챠트영역 -->
+            </div>
 
 		</div>
 		<!-- E:Content -->
 
-
+		
 		<!-- S:SideContent -->
 		<div id="sideContent">
-			<h2 class="title-box">누적발전량</h2>
+			
+			<h2 class="icon icon01">Energy Mode</h2>
 
-			<div class="tabs">
-				<button class="on">DAY</button>
-				<button>MONTH</button>
-				<button>YEAR</button>
+			<div class="mode-box mode1">
+				<strong>Best Power Efficiency</strong>
+				<p>This mode will help to extend the power storage efficiency.</p>
+				
+				<a href="">Change Plan</a>
 			</div>
 
-			<div class="gen-chart">
+			
+			<h2 class="icon icon02">Energy Storage</h2>
 
-			</div>
+            <div class="stroage-box">
+                <div class="chart">
+                    <!-- 챠트영역 -->
+                </div>
 
-			<div class="legend">
-				<span class="today">금일</span>
-				<span>전일</span>
-			</div>
-
-			<div class="cost">
-				<span>SMP[￦]</span>
-				<p><strong>10</strong>천원</p>
-				<span>REC[￦]</span>
-				<p><strong>10</strong>천원</p>
-				<span>SMP+REC[￦]</span>
-				<p><strong>10</strong>천원</p>
-			</div>
+                <ul class="legend">
+                    <li>
+                        <span>Main Power</span>
+                        <strong>50%</strong>
+                    </li>
+                    <li>
+                        <span>Green Energy</span>
+                        <strong>25%</strong>
+                    </li>
+                </ul>
+            </div>
 		</div>
 		<!-- E:SideContent -->
 
+
         <aside>
-            <a class="tab1 on" herf="">main</a>
-            <a class="tab2 " herf="">charger</a>
+            <a class="tab1" herf="">main</a>
+            <a class="tab2 on " herf="">charger</a>
             <a class="tab3" herf="">PV_report</a>
             <a class="tab4" herf="">ESS_report</a>
             <a class="tab5" herf="">설정</a>
